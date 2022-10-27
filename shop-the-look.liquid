@@ -8,18 +8,18 @@
   {% if section.blocks.size > 0 %}
     <div class="quotes-wrapper" data-slider>
 
-      {% if section.blocks.size > 1 %}
+ 
         <ul class="test" data-slider-indicators>
           {%- for block in section.blocks -%}
            
           {%- endfor -%}
         </ul>
-      {% endif %}
+   
     </div>
   {% endif %}
 
   {% if section.blocks.size == 0 %}
-    {% include 'no-blocks' %}
+     
   {% endif %}
 </div>
 
@@ -28,7 +28,7 @@
 {% schema %}
 {
   "name": {
-    "en": "Shop the look",
+    "en": "Shop the look"
   },
   "class": "index-section",
   "max_blocks": 6,
@@ -37,7 +37,7 @@
       "type": "text",
       "id": "title",
       "label": {
-        "en": "Heading",
+        "en": "Heading"
       }
     }
   ],
@@ -45,17 +45,17 @@
     {
       "type": "product",
       "name": {
-        "en": "Product",
+        "en": "Product"
       },
       "settings": [
         {
           "type": "text",
           "id": "author",
           "label": {
-            "en": "Author",
+            "en": "Author"
           },
           "default": {
-            "en": "Author's name",
+            "en": "Author's name"
           }
         }
       ]
@@ -64,10 +64,10 @@
   "presets": [
     {
       "name": {
-        "en": "Shop the look",
+        "en": "Shop the look"
       },
       "category": {
-        "en": "product",
+        "en": "product"
       },
       "blocks": [
         {

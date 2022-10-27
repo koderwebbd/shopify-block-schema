@@ -1,0 +1,86 @@
+<div class="page-width" data-section-id="{{ section.id }}" data-section-type="quotes">
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="quotes-wrapper" data-slider>
+
+      {% if section.blocks.size > 1 %}
+        <ul class="test" data-slider-indicators>
+          {%- for block in section.blocks -%}
+           
+          {%- endfor -%}
+        </ul>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</div>
+
+
+
+{% schema %}
+{
+  "name": {
+    "en": "Shop the look",
+  },
+  "class": "index-section",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "en": "Heading",
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": {
+        "en": "Product",
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "author",
+          "label": {
+            "en": "Author",
+          },
+          "default": {
+            "en": "Author's name",
+          }
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Shop the look",
+      },
+      "category": {
+        "en": "product",
+      },
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

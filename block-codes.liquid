@@ -11,7 +11,10 @@
  
         <ul class="test" data-slider-indicators>
           {%- for block in section.blocks -%}
-           
+           {% case block.type %}
+            {%- when 'product' -%}
+        
+            {%- endcase -%}
           {%- endfor -%}
         </ul>
    

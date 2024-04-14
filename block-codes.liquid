@@ -13,7 +13,8 @@
           {%- for block in section.blocks -%}
            {% case block.type %}
             {%- when 'product' -%}
-        
+                <div class="item" {{ block.shopify_attributes }}>
+                </div>
             {%- endcase -%}
           {%- endfor -%}
         </ul>

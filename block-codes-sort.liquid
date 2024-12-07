@@ -1,0 +1,16 @@
+{%- assign filtered_blocks = section.blocks | where: "type", "title_mobile" %}
+{%- assign filtered_blocks = filtered_blocks | concat: section.blocks | where: "type", "price_mobile" %}
+{%- assign filtered_blocks = filtered_blocks | concat: section.blocks | where: "type", "rating_mobile" %}
+
+{%- for block in filtered_blocks -%}
+  {%- comment %} Render the block content here {%- endcomment %}
+  {{ block.content }}
+{%- endfor -%}
+
+
+{%- assign title_mobile = section.blocks | where: "type", "title_mobile" %}
+
+{%- for block in title_mobile -%}
+  {%- comment %} Render the block content here {%- endcomment %}
+  {{ block.content }}
+{%- endfor -%}
